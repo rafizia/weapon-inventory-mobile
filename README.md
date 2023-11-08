@@ -8,20 +8,20 @@ Kelas: PBP B<br>
    **Jawab:**
 
 * **Stateless Widget**<br>
-*Stateless widget* adalah widget yang tidak memiliki keadaan internal (state). Jenis *widget* ini tidak berubah dengan sendirinya melalui tindakan atau perilaku internal namun hanya bergantung pada tindakan yang diberikan dari luar. Ketika properti berubah, *Stateless widget* akan diberi tahu untuk me-*refresh* diri mereka sendiri dan merender ulang dengan data yang diperbarui. *Stateless widget* cocok untuk bagian-bagian UI yang hanya perlu merender data yang diberikan tanpa perlu menyimpan atau mengelola keadaan sendiri.
+*Stateless widget* adalah *widget* yang tidak memiliki keadaan internal (*state*). Jenis *widget* ini tidak berubah dengan sendirinya melalui tindakan atau perilaku internal namun hanya bergantung pada tindakan yang diberikan dari luar. Ketika properti berubah, *Stateless widget* akan diberi tahu untuk me-*refresh* diri mereka sendiri dan merender ulang dengan data yang diperbarui. *Stateless widget* cocok untuk bagian-bagian UI yang hanya perlu merender data yang diberikan tanpa perlu menyimpan atau mengelola keadaan sendiri.
 * **Stateful Widget**<br>
-*Stateful widget* adalah widget yang memiliki keadaan internal (state). Jenis *widget* ini dapat menyimpan data dan keadaan aplikasi yang berubah, serta merespons perubahan ini dengan cara yang sesuai. Ketika keadaan internal berubah, *stateful widget* akan me-*refresh* diri mereka sendiri dan merender ulang dengan data yang diperbarui. *Stateful widget* cocok untuk bagian-bagian UI yang memerlukan pengelolaan keadaan, seperti formulir, *widget* interaktif, atau komponen yang memerlukan perubahan data real-time.
+*Stateful widget* adalah *widget* yang memiliki keadaan internal (*state*). Jenis *widget* ini dapat menyimpan data dan keadaan aplikasi yang berubah, serta merespons perubahan ini dengan cara yang sesuai. Ketika keadaan internal berubah, *stateful widget* akan me-*refresh* diri mereka sendiri dan merender ulang dengan data yang diperbarui. *Stateful widget* cocok untuk bagian-bagian UI yang memerlukan pengelolaan keadaan, seperti formulir, *widget* interaktif, atau komponen yang memerlukan perubahan data *real-time*.
 
 2. Sebutkan seluruh *widget* yang kamu gunakan untuk menyelesaikan tugas ini dan jelaskan fungsinya masing-masing.
 
    **Jawab**
 
 * **Widget MyApp**<br>
-Widget ini merupakan widget root dari aplikasi. Widget ini langsung ditampilkan di layar dan menjadi titik awal dari seluruh tampilan dan berfungsi sebagai pengaturan utama dan kontrol pusat untuk aplikasi. Widget ini memiliki kegunaan seperti menginisialisasi aplikasi, menyediakan konteks (BuildContext), dan mengatur tema.
+*Widget* ini merupakan *widget root* dari aplikasi. *Widget* ini langsung ditampilkan di layar dan menjadi titik awal dari seluruh tampilan dan berfungsi sebagai pengaturan utama dan kontrol pusat untuk aplikasi. *Widget* ini memiliki kegunaan seperti menginisialisasi aplikasi, menyediakan konteks (BuildContext), dan mengatur tema.
 * **MyHomePage**<br>
-Merupakan *widget* yang berguna untuk meletakkan nama app, serta menampilkan widget-widget children seperti *widget* "Lihat Item", "Tambah Item", dan "Logout".
+Merupakan *widget* yang berguna untuk meletakkan nama app, serta menampilkan *widget-widget children* seperti `WeaponCard`.
 * **WeaponCard**<br>
-Merupakan *widget* yang berguna untuk menjalankan fungsi-fungsi seperti "Lihat Item", "Tambah Item", dan "Logout".
+Merupakan *widget* yang berguna untuk meletakkan tombol "Lihat Item", "Tambah Item", dan "Logout".
 
 3. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial)
 
