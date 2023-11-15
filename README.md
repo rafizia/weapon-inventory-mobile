@@ -59,10 +59,10 @@ Kelas: PBP B<br>
     }
   }
   ```
-  FirstPage adalah halaman pertama yang menampilkan tombol. Saat tombol ditekan, kita menggunakan Navigator.push() untuk memulai transisi ke SecondPage. Setelah transisi, SecondPage akan ditambahkan ke tumpukan navigasi di atas FirstPage. Jadi, ketika pengguna menekan tombol "kembali" di SecondPage, mereka akan kembali ke FirstPage.
+  FirstPage adalah halaman pertama yang menampilkan tombol. Saat tombol ditekan, kita menggunakan `Navigator.push()` untuk memulai transisi ke SecondPage. Setelah transisi, SecondPage akan ditambahkan ke tumpukan navigasi di atas FirstPage. Jadi, ketika pengguna menekan tombol "kembali" di SecondPage, mereka akan kembali ke FirstPage.
 
 * `Navigator.pushReplacement()`<br>
-  Method `Navigator.pushReplacement()` akan menggantikan route yang sudah ada pada atas stack dengan route baru tersebut. Hal ini bermanfaat ketika Anda ingin mengganti halaman saat ini dengan halaman baru dan menghapus halaman sebelumnya dari tumpukan. Contoh:
+  Method `Navigator.pushReplacement()` akan menggantikan route yang sudah ada pada atas stack dengan route baru tersebut. Hal ini bermanfaat ketika ingin mengganti halaman saat ini dengan halaman baru dan menghapus halaman sebelumnya dari tumpukan. Contoh:
   ```
   import 'package:flutter/material.dart';
 
@@ -115,7 +115,7 @@ Kelas: PBP B<br>
   ```
   Saat tombol ditekan di FirstPage, kita menggunakan `Navigator.pushReplacement()` untuk menggantikan FirstPage dengan SecondPage dalam tumpukan navigasi. Sehingga, jika pengguna menekan tombol kembali di SecondPage, mereka tidak akan kembali ke FirstPage, tetapi keluar dari aplikasi (karena FirstPage telah digantikan).
 
-2. Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
+2. Jelaskan masing-masing *layout* widget pada Flutter dan konteks penggunaannya masing-masing!
 
    **Jawab**
 
@@ -140,13 +140,13 @@ Kelas: PBP B<br>
 
    **Jawab**
 
-  Pada tugas kali ini saya menggunakan 6 elemen input yaitu `name`, `type`, `atk`, `rarity`, `description`, dan `amount` yang masing-masing diinput menggunakan `TextFormField`, saya menggunakan `TextFormField` dikarenakan 6 elemen input tadi merupakan sebuah input berbentuk teks.
+   Pada tugas kali ini saya menggunakan 6 elemen input yaitu `name`, `type`, `atk`, `rarity`, `description`, dan `amount` yang masing-masing diinput menggunakan `TextFormField`, saya menggunakan `TextFormField` dikarenakan 6 elemen input tadi merupakan sebuah input berbentuk teks.
 
 4. Bagaimana penerapan *clean architecture* pada aplikasi Flutter?
 
    **Jawab**
 
-  *Clean Architecture* adalah suatu pendekatan pengembangan perangkat lunak yang bertujuan untuk memisahkan dan mengorganisir kode secara bersih dan terstruktur, dengan tujuan utama untuk mempermudah pemeliharaan, pengujian, dan skalabilitas aplikasi. Pada dasarnya, *Clean Architecture* terdiri dari tiga lapisan utama: *Domain Layer*, *Data Layer*, dan *Presentation Layer*.
+   *Clean Architecture* adalah suatu pendekatan pengembangan perangkat lunak yang bertujuan untuk memisahkan dan mengorganisir kode secara bersih dan terstruktur, dengan tujuan utama untuk mempermudah pemeliharaan, pengujian, dan skalabilitas aplikasi. Pada dasarnya, *Clean Architecture* terdiri dari tiga lapisan utama: *Domain Layer*, *Data Layer*, dan *Presentation Layer*.
 * *Domain Layer*: Lapisan *domain* mewakili logika bisnis inti aplikasi. Lapisan ini berisi kasus penggunaan, entitas, dan aturan bisnis. Kasus penggunaan menentukan operasi atau tindakan yang dapat dilakukan dalam aplikasi. Entitas mewakili objek penting dalam *domain* dan merangkum perilaku dan keadaannya. Lapisan *domain* harus agnostik terhadap *frameworks* atau teknologi tertentu.
 * *Data Layer*: Lapisan data bertanggung jawab untuk pengambilan dan penyimpanan data. Ini terdiri dari repositori dan sumber data. Repositori menyediakan lapisan abstraksi untuk mengakses dan memanipulasi data. Repositori menentukan kontrak atau antarmuka untuk operasi data, yang diterapkan oleh sumber data. Sumber data dapat berupa API jarak jauh, *database* lokal, atau penyedia data eksternal lainnya. Lapisan data melindungi lapisan *domain* dari detail penyimpanan dan pengambilan data.
 * *Presentation Layer*: Lapisan ini berisi komponen antarmuka pengguna, seperti widget, layar, dan tampilan. Lapisan ini bertanggung jawab untuk menangani interaksi pengguna dan merender UI. Lapisan presentasi harus independen terhadap logika bisnis dan detail implementasi akses data.
