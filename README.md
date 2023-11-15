@@ -58,7 +58,7 @@ Kelas: PBP B<br>
       );
     }
   }
-```
+  ```
   FirstPage adalah halaman pertama yang menampilkan tombol. Saat tombol ditekan, kita menggunakan Navigator.push() untuk memulai transisi ke SecondPage. Setelah transisi, SecondPage akan ditambahkan ke tumpukan navigasi di atas FirstPage. Jadi, ketika pengguna menekan tombol "kembali" di SecondPage, mereka akan kembali ke FirstPage.
 
 * `Navigator.pushReplacement()`
