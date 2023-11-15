@@ -8,123 +8,133 @@ Kelas: PBP B<br>
    **Jawab:**
 
 * `Navigator.push()`
-Method `Navigator.push()` akan menambahkan route baru diatas route yang sudah ada pada atas stack. Contoh:
-```
-import 'package:flutter/material.dart';
+  Method `Navigator.push()` akan menambahkan route baru diatas route yang sudah ada pada atas stack. Contoh:
+  ```
+  import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+  void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: FirstPage(),
-    );
+  class MyApp extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        home: FirstPage(),
+      );
+    }
   }
-}
 
-class FirstPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('First Page'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => SecondPage()),
-            );
-          },
-          child: Text('Go to Second Page'),
+  class FirstPage extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(
+          title: Text('First Page'),
         ),
-      ),
-    );
+        body: Center(
+          child: ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SecondPage()),
+              );
+            },
+            child: Text('Go to Second Page'),
+          ),
+        ),
+      );
+    }
   }
-}
 
-class SecondPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Second Page'),
-      ),
-      body: Center(
-        child: Text('This is the Second Page'),
-      ),
-    );
+  class SecondPage extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(
+          title: Text('Second Page'),
+        ),
+        body: Center(
+          child: Text('This is the Second Page'),
+        ),
+      );
+    }
   }
-}
 ```
-FirstPage adalah halaman pertama yang menampilkan tombol. Saat tombol ditekan, kita menggunakan Navigator.push() untuk memulai transisi ke SecondPage. Setelah transisi, SecondPage akan ditambahkan ke tumpukan navigasi di atas FirstPage. Jadi, ketika pengguna menekan tombol "kembali" di SecondPage, mereka akan kembali ke FirstPage.
+  FirstPage adalah halaman pertama yang menampilkan tombol. Saat tombol ditekan, kita menggunakan Navigator.push() untuk memulai transisi ke SecondPage. Setelah transisi, SecondPage akan ditambahkan ke tumpukan navigasi di atas FirstPage. Jadi, ketika pengguna menekan tombol "kembali" di SecondPage, mereka akan kembali ke FirstPage.
 
 * `Navigator.pushReplacement()`
-Method `Navigator.pushReplacement()` akan menggantikan route yang sudah ada pada atas stack dengan route baru tersebut. Hal ini bermanfaat ketika Anda ingin mengganti halaman saat ini dengan halaman baru dan menghapus halaman sebelumnya dari tumpukan. Contoh:
-```
-import 'package:flutter/material.dart';
+  Method `Navigator.pushReplacement()` akan menggantikan route yang sudah ada pada atas stack dengan route baru tersebut. Hal ini bermanfaat ketika Anda ingin mengganti halaman saat ini dengan halaman baru dan menghapus halaman sebelumnya dari tumpukan. Contoh:
+  ```
+  import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+  void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: FirstPage(),
-    );
+  class MyApp extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        home: FirstPage(),
+      );
+    }
   }
-}
 
-class FirstPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('First Page'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => SecondPage()),
-            );
-          },
-          child: Text('Go to Second Page (replace)'),
+  class FirstPage extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(
+          title: Text('First Page'),
         ),
-      ),
-    );
+        body: Center(
+          child: ElevatedButton(
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => SecondPage()),
+              );
+            },
+            child: Text('Go to Second Page (replace)'),
+          ),
+        ),
+      );
+    }
   }
-}
 
-class SecondPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Second Page'),
-      ),
-      body: Center(
-        child: Text('This is the Second Page'),
-      ),
-    );
+  class SecondPage extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        appBar: AppBar(
+          title: Text('Second Page'),
+        ),
+        body: Center(
+          child: Text('This is the Second Page'),
+        ),
+      );
+    }
   }
-}
-```
-Saat tombol ditekan di FirstPage, kita menggunakan `Navigator.pushReplacement()` untuk menggantikan FirstPage dengan SecondPage dalam tumpukan navigasi. Sehingga, jika pengguna menekan tombol kembali di SecondPage, mereka tidak akan kembali ke FirstPage, tetapi keluar dari aplikasi (karena FirstPage telah digantikan).
+  ```
+  Saat tombol ditekan di FirstPage, kita menggunakan `Navigator.pushReplacement()` untuk menggantikan FirstPage dengan SecondPage dalam tumpukan navigasi. Sehingga, jika pengguna menekan tombol kembali di SecondPage, mereka tidak akan kembali ke FirstPage, tetapi keluar dari aplikasi (karena FirstPage telah digantikan).
 
 2. Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!
 
    **Jawab**
 
-* **Widget MyApp**<br>
-*Widget* ini merupakan *widget root* dari aplikasi. *Widget* ini langsung ditampilkan di layar dan menjadi titik awal dari seluruh tampilan dan berfungsi sebagai pengaturan utama dan kontrol pusat untuk aplikasi. *Widget* ini memiliki kegunaan seperti menginisialisasi aplikasi, menyediakan konteks (BuildContext), dan mengatur tema.
-* **MyHomePage**<br>
-Merupakan *widget* yang berguna untuk meletakkan nama app, serta menampilkan *widget-widget children* seperti `WeaponCard`.
-* **WeaponCard**<br>
-Merupakan *widget* yang berguna untuk meletakkan tombol "Lihat Item", "Tambah Item", dan "Logout".
+* **Container**<br>
+  Container adalah widget serbaguna yang dapat digunakan untuk mengatur dan mendekorasi child widget. Widget ini dapat berfungsi sebagai wadah untuk widget lain atau sebagai widget tata letak sendiri.
+* **Column**<br>
+  Column menyusun widget-child secara vertikal. Digunakan ketika ingin menempatkan widget di dalam kolom secara berurutan dari atas ke bawah.
+* **Row**<br>
+  Row menyusun widget-child secara horizontal. Digunakan ketika ingin menempatkan widget di dalam baris secara berurutan dari kiri ke kanan.
+* **Stack**<br>
+  Stack memungkinkan penumpukan widget di atas satu sama lain. Widget di bagian atas menutupi widget di bawahnya.
+* **ListView**<br>
+  ListView digunakan untuk menampilkan daftar widget secara bergulir. Berguna ketika memiliki daftar item yang lebih besar daripada yang dapat ditampilkan pada layar sekaligus.
+* **GridView**<br>
+  GridView mengatur widget dalam bentuk grid dengan baris dan kolom. Cocok untuk menampilkan data dalam format grid.
+* **SizedBox**<br>
+  SizedBox digunakan untuk memberikan dimensi tertentu (lebar, tinggi) pada child widget.
+* **Expanded**<br>
+  Expanded mengisi sebanyak mungkin ruang yang tersedia di dalam parent widget, misalnya dalam Column atau Row, untuk memberikan widget-child lebih banyak ruang.
 
 3. Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!
 
@@ -136,12 +146,12 @@ Pada tugas kali ini saya menggunakan 6 elemen input yaitu `name`, `type`, `atk`,
 
    **Jawab**
 
-*Clean Architecture* adalah suatu pendekatan pengembangan perangkat lunak yang bertujuan untuk memisahkan dan mengorganisir kode secara bersih dan terstruktur, dengan tujuan utama untuk mempermudah pemeliharaan, pengujian, dan skalabilitas aplikasi. Pada dasarnya, *Clean Architecture* terdiri dari tiga lapisan utama: *Domain Layer*, *Data Layer*, dan *Presentation Layer*.
+  *Clean Architecture* adalah suatu pendekatan pengembangan perangkat lunak yang bertujuan untuk memisahkan dan mengorganisir kode secara bersih dan terstruktur, dengan tujuan utama untuk mempermudah pemeliharaan, pengujian, dan skalabilitas aplikasi. Pada dasarnya, *Clean Architecture* terdiri dari tiga lapisan utama: *Domain Layer*, *Data Layer*, dan *Presentation Layer*.
 * *Domain Layer*: Lapisan *domain* mewakili logika bisnis inti aplikasi. Lapisan ini berisi kasus penggunaan, entitas, dan aturan bisnis. Kasus penggunaan menentukan operasi atau tindakan yang dapat dilakukan dalam aplikasi. Entitas mewakili objek penting dalam *domain* dan merangkum perilaku dan keadaannya. Lapisan *domain* harus agnostik terhadap *frameworks* atau teknologi tertentu.
 * *Data Layer*: Lapisan data bertanggung jawab untuk pengambilan dan penyimpanan data. Ini terdiri dari repositori dan sumber data. Repositori menyediakan lapisan abstraksi untuk mengakses dan memanipulasi data. Repositori menentukan kontrak atau antarmuka untuk operasi data, yang diterapkan oleh sumber data. Sumber data dapat berupa API jarak jauh, *database* lokal, atau penyedia data eksternal lainnya. Lapisan data melindungi lapisan *domain* dari detail penyimpanan dan pengambilan data.
 * *Presentation Layer*: Lapisan ini berisi komponen antarmuka pengguna, seperti widget, layar, dan tampilan. Lapisan ini bertanggung jawab untuk menangani interaksi pengguna dan merender UI. Lapisan presentasi harus independen terhadap logika bisnis dan detail implementasi akses data.
 
-Petunjuk penerapan *clean architecture*:
+  Petunjuk penerapan *clean architecture*:
 * *Domain Layer* tidak bergantung pada lapisan lainnya: Lapisan *domain* berisi logika bisnis inti dan tidak boleh memiliki ketergantungan apa pun pada *frameworks* eksternal, *libraries*, atau komponen terkait UI. Hal ini membuat lapisan *domain* dapat digunakan kembali dan tidak bergantung pada *platform*.
 * *Data Layer* bergantung pada lapisan *Domain*: Lapisan data mengimplementasikan antarmuka atau abstraksi yang ditentukan dalam lapisan *domain*. Hal ini memungkinkan sumber data yang berbeda (misalnya API, *database*) untuk dicolokkan ke dalam aplikasi tanpa mempengaruhi lapisan *domain*.
 * *Presentation Layer* bergantung pada lapisan *Domain*: Lapisan presentasi berinteraksi dengan lapisan *domain* melalui antarmuka atau abstraksi yang disediakan oleh lapisan *domain*. Hal ini memungkinkan logika bisnis dipisahkan dari lapisan presentasi.
