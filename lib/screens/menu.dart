@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:weapon_inventory/widgets/left_drawer.dart';
+import 'package:weapon_inventory/screens/weaponlist_form.dart';
+import 'package:weapon_inventory/widgets/weapon_card.dart';
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key}) : super(key: key);
@@ -17,6 +20,7 @@ class MyHomePage extends StatelessWidget {
           'Weapon Inventory',
         ),
       ),
+      drawer: const LeftDrawer(),
       body: SingleChildScrollView(
         // Widget wrapper yang dapat discroll
         child: Padding(
@@ -58,14 +62,6 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
-class WeaponItem {
-  final String name;
-  final IconData icon;
-  final Color color;
-
-  WeaponItem(this.name, this.icon, this.color);
-}
-
 class WeaponCard extends StatelessWidget {
   final WeaponItem item;
 
@@ -83,6 +79,13 @@ class WeaponCard extends StatelessWidget {
             ..hideCurrentSnackBar()
             ..showSnackBar(SnackBar(
                 content: Text("Kamu telah menekan tombol ${item.name}!")));
+
+          // Navigate ke route yang sesuai (tergantung jenis tombol)
+          if (item.name == "Tambah Item") {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const WeaponFormPage()));
+          }
+
         },
         child: Container(
           // Container untuk menyimpan Icon dan Text
