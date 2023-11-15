@@ -7,7 +7,7 @@ Kelas: PBP B<br>
 
    **Jawab:**
 
-* `Navigator.push()`
+* `Navigator.push()`<br>
   Method `Navigator.push()` akan menambahkan route baru diatas route yang sudah ada pada atas stack. Contoh:
   ```
   import 'package:flutter/material.dart';
@@ -61,7 +61,7 @@ Kelas: PBP B<br>
   ```
   FirstPage adalah halaman pertama yang menampilkan tombol. Saat tombol ditekan, kita menggunakan Navigator.push() untuk memulai transisi ke SecondPage. Setelah transisi, SecondPage akan ditambahkan ke tumpukan navigasi di atas FirstPage. Jadi, ketika pengguna menekan tombol "kembali" di SecondPage, mereka akan kembali ke FirstPage.
 
-* `Navigator.pushReplacement()`
+* `Navigator.pushReplacement()`<br>
   Method `Navigator.pushReplacement()` akan menggantikan route yang sudah ada pada atas stack dengan route baru tersebut. Hal ini bermanfaat ketika Anda ingin mengganti halaman saat ini dengan halaman baru dan menghapus halaman sebelumnya dari tumpukan. Contoh:
   ```
   import 'package:flutter/material.dart';
@@ -140,7 +140,7 @@ Kelas: PBP B<br>
 
    **Jawab**
 
-Pada tugas kali ini saya menggunakan 6 elemen input yaitu `name`, `type`, `atk`, `rarity`, `description`, dan `amount` yang masing-masing diinput menggunakan `TextFormField`, saya menggunakan `TextFormField` dikarenakan 6 elemen input tadi merupakan sebuah input berbentuk teks.
+  Pada tugas kali ini saya menggunakan 6 elemen input yaitu `name`, `type`, `atk`, `rarity`, `description`, dan `amount` yang masing-masing diinput menggunakan `TextFormField`, saya menggunakan `TextFormField` dikarenakan 6 elemen input tadi merupakan sebuah input berbentuk teks.
 
 4. Bagaimana penerapan *clean architecture* pada aplikasi Flutter?
 
