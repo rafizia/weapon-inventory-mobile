@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:weapon_inventory/screens/menu.dart';
 import 'package:weapon_inventory/screens/weaponlist_form.dart';
 
+import '../screens/list_item.dart';
+
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
 
@@ -59,6 +61,17 @@ class LeftDrawer extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) => const WeaponFormPage(),
                   ));
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.shopping_basket),
+            title: const Text('Daftar Item'),
+            onTap: () {
+              // Route menu ke halaman item
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ItemPage()),
+              );
             },
           ),
         ],
